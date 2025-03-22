@@ -100,8 +100,6 @@ a {
   column-gap: 27px;
   margin-left: -0.75em;
 }
-.navbar__item {
-}
 .navbar__link {
   display: block;
   padding: 0.5em 0.75em;
@@ -171,8 +169,6 @@ a {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.experience__title {
-}
 .experience__container {
   display: flex;
   flex-wrap: wrap;
@@ -192,8 +188,6 @@ a {
 .experience-item__number {
   font-size: 1.3125rem; /* 21px */
   font-weight: 500;
-}
-.experience-item__label {
 }
 .experience-item__picture {
   display: block;
