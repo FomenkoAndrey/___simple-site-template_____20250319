@@ -68,22 +68,36 @@ a {
   width: min(100% - var(--gap-xl), var(--container-secondary));
   margin-inline: auto;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  visibility: hidden; /* Optional for fallback support */
+}
 
 /* Header section */
 .header {
   background-color: var(--color-gray-light);
-  padding-top: 79px;
+  padding-top: 69px;
   padding-bottom: 141px;
 }
 
 /* Navbar */
 .navbar {
-  margin-bottom: 162px;
+  margin-bottom: 141px;
 }
 .navbar__list {
   display: flex;
   flex-wrap: wrap;
-  columns: var(--gap);
+  column-gap: 27px;
   margin-left: -0.75em;
 }
 .navbar__item {
@@ -92,6 +106,7 @@ a {
   display: block;
   padding: 0.5em 0.75em;
   text-transform: uppercase;
+  letter-spacing: var(--letter-spacing);
 }
 .navbar__link--active {
   font-weight: 500;
@@ -106,11 +121,12 @@ a {
   max-width: var(--container-secondary);
 }
 .hero__title {
-  margin-bottom: 60px;
+  margin-top: 0;
+  margin-bottom: 38px;
 }
 .hero__description {
   color: var(--color-secondary);
-  margin-bottom: 65px;
+  margin-bottom: 57px;
 }
 .hero__button {
   display: flex;
@@ -122,16 +138,17 @@ a {
   text-transform: uppercase;
   color: var(--color-white);
   padding: 0.5em;
+  letter-spacing: var(--letter-spacing);
 }
 
 /* Section - common for About and Process */
 .section {
-  padding-top: 100px;
-  padding-bottom: 120px;
+  padding-top: 110px;
+  padding-bottom: 90px;
   text-align: center;
 }
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 35px;
 }
 .section__description {
   color: var(--color-secondary);
@@ -151,11 +168,14 @@ a {
 .experience {
   background-color: var(--color-primary);
   color: var(--color-white);
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .experience__title {
 }
 .experience__container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   gap: var(--gap-xl);
 }
@@ -164,14 +184,50 @@ a {
   gap: var(--gap);
 }
 .experience-item__description {
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .experience-item__number {
   font-size: 1.3125rem; /* 21px */
   font-weight: 500;
-  margin-top: -5px;
 }
 .experience-item__label {
 }
-.experience-item__image {
+.experience-item__picture {
+  display: block;
   order: -1;
+}
+.experience-item__image {
+  display: block;
+}
+
+/* Video */
+.video {
+  padding-bottom: 100px;
+  background-color: var(--color-gray-light);
+  margin-top: calc(var(--gap-xl) * -1);
+}
+.video__iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.footer__title {
+  font-size: 1.3125rem; /* 21px */
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.footer__description {
+  font-size: 0.8125rem; /* 13px */
 }
