@@ -208,6 +208,7 @@ a {
   height: auto;
   aspect-ratio: 16 / 9;
   border: 0;
+  min-height: 200px;
 }
 
 /* Footer */
@@ -224,4 +225,33 @@ a {
 }
 .footer__description {
   font-size: 0.8125rem; /* 13px */
+}
+
+@media (width < 992px) {
+  .header {
+    padding-bottom: 80px;
+  }
+  .navbar {
+    margin-bottom: 70px;
+  }
+  .experience__container {
+    justify-content: space-evenly;
+  }
+}
+
+@media (width < 576px) {
+  .navbar {
+    margin-bottom: 50px;
+  }
+  .navbar__list {
+    justify-content: center;
+  }
+  .hero {
+    text-align: center;
+    align-items: center;
+  }
+  .section {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
 }
