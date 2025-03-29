@@ -4,6 +4,5 @@
 /* About */
 .about {
   background-color: $color-white;
+  @include section();
 }
-
-// TODO: рефакторінг через extends

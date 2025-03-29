@@ -3,21 +3,41 @@
 
 /* Navbar */
 .navbar {
-  margin-bottom: 141px;
-}
-.navbar__list {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 27px;
-  margin-left: -0.75em;
-}
-.navbar__link {
-  display: block;
-  padding: 0.5em 0.75em;
-  text-transform: uppercase;
-  letter-spacing: $letter-spacing;
-}
-.navbar__link--active {
-  font-weight: 500;
-  color: $color-primary;
+  @include lg-min() {
+    margin-bottom: 141px;
+  }
+  @include lg-sm {
+    margin-bottom: 70px;
+  }
+  @include sm() {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: -0.75em;
+
+    column-gap: 27px;
+
+    @include sm() {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    padding: 0.5em 0.75em;
+
+    letter-spacing: $letter-spacing;
+    text-transform: uppercase;
+
+    &--active {
+      color: $color-primary;
+
+      font-weight: 500;
+    }
+  }
 }

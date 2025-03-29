@@ -3,7 +3,14 @@
 
 /* Header section */
 .header {
-  background-color: $color-gray-light;
   padding-top: 69px;
-  padding-bottom: 141px;
+
+  background-color: $color-gray-light;
+
+  @include lg-min {
+    padding-bottom: 141px;
+  }
+  @include lg {
+    padding-bottom: 80px;
+  }
 }

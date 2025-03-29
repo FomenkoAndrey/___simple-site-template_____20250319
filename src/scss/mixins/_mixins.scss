@@ -1,0 +1,21 @@
+@use '../presets' as *;
+
+@mixin section() {
+  padding-top: 110px;
+  padding-bottom: 90px;
+
+  text-align: center;
+
+  @media (width < 576px) {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+  }
+
+  &__description {
+    color: $color-secondary;
+  }
+}
